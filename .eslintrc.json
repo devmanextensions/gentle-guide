@@ -1,0 +1,19 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "extends": ["eslint:recommended"],
+    "rules": {
+        "semi": "error",
+        "no-multiple-empty-lines": "error",
+        "space-in-parens": "error",
+        "prefer-const": "error",
+        "no-use-before-define": "error",
+        "indent": "error",
+        "no-var": "error"
+    }
+}
