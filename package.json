@@ -13,7 +13,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint index.js",
-        "js-compile": "rollup --config rollup.config.js --sourcemap"
+        "js-compile": "rollup --config rollup.config.js --sourcemap",
+        "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/gentleguide.js.map,includeSources,url=gentleguide.min.js.map\" --output dist/js/gentleguide.min.js dist/js/gentleguide.js"
     },
     "keywords": [
         "devman",
@@ -31,6 +32,7 @@
         "@babel/preset-env": "^7.10.4",
         "@rollup/plugin-babel": "^5.1.0",
         "eslint": "^7.5.0",
-        "rollup": "^2.23.0"
+        "rollup": "^2.23.0",
+        "terser": "^4.8.0"
     }
 }
