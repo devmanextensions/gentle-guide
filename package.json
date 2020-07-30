@@ -13,6 +13,9 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint index.js",
+        "production": "npm-run-all --sequential compile",
+        "compile": "npm-run-all --parallel js",
+        "js": "npm-run-all --sequential js-compile js-minify",
         "js-compile": "rollup --config rollup.config.js --sourcemap",
         "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/gentleguide.js.map,includeSources,url=gentleguide.min.js.map\" --output dist/js/gentleguide.min.js dist/js/gentleguide.js"
     },
@@ -32,6 +35,7 @@
         "@babel/preset-env": "^7.10.4",
         "@rollup/plugin-babel": "^5.1.0",
         "eslint": "^7.5.0",
+        "npm-run-all": "^4.1.5",
         "rollup": "^2.23.0",
         "terser": "^4.8.0"
     }
