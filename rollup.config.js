@@ -12,7 +12,7 @@ export default {
  * Licensed under ISC (https://github.com/devmanextensions/gentle-guide/blob/master/LICENSE)
  */`,
         file: 'dist/js/gentleguide.js',
-        format: 'esm',
+        format: 'umd',
         name: 'gentleguide',
     },
     plugins: [babel({ babelHelpers: 'external', exclude: 'node_modules/**' })],
