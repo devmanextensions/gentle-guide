@@ -38,7 +38,6 @@
     "devDependencies": {
         "@babel/cli": "^7.10.5",
         "@babel/core": "^7.10.5",
-        "@babel/plugin-external-helpers": "^7.10.4",
         "@babel/preset-env": "^7.10.4",
         "@rollup/plugin-babel": "^5.1.0",
         "clean-css-cli": "^4.3.0",

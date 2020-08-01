@@ -15,5 +15,10 @@ export default {
         format: 'umd',
         name: 'gentleguide',
     },
-    plugins: [babel({ babelHelpers: 'external', exclude: 'node_modules/**' })],
+    plugins: [
+        babel({
+            babelHelpers: 'bundled',
+            exclude: 'node_modules/**',
+        }),
+    ],
 };
