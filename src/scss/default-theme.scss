@@ -1,0 +1,77 @@
+/*!
+ *   Gentle Guide Default Theme v1.0.0
+ *   Author: Dariel Vicedo <dariel@devmanextensions.com> (https://devmanextensions.com)
+ *   License: Open source - ISC <http://opensource.org/licenses/ISC>
+ */
+
+$gg-card-arrow-width: 6px;
+$gg-card-arrow-height: 6px;
+$gg-card-color-border: #c0c0c0;
+$gg-card-content-back: #DCDCDC;
+$gg-card-content-text: #000000;
+$gg-card-footer-back: #f5f5f5;
+$gg-card-action-next-color: #006400;
+
+.gg-card {
+    border: 2px solid $gg-card-color-border;
+
+    .gg-card-content {
+        background-color: $gg-card-content-back;
+        color: $gg-card-content-text;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.125);
+    }
+
+    .gg-card-footer {
+        font-size: small;
+        text-align: right;
+        padding: 0;
+        border-top: 1px solid $gg-card-color-border;
+        background-color: $gg-card-footer-back;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.gg-card-top {
+    box-shadow: -5px -3px 3px rgba(0, 0, 0, 0.125);
+
+    .gg-card-arrow {
+        &::before {
+            border-top-color: $gg-card-color-border;
+        }
+    }
+}
+
+.gg-card-right {
+    box-shadow: 5px -3px 3px rgba(0, 0, 0, 0.125);
+
+    .gg-card-arrow {
+        &::before {
+            border-right-color: $gg-card-color-border;
+        }
+    }
+}
+
+.gg-card-bottom {
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.125);
+
+    .gg-card-arrow {
+        &::before {
+            border-bottom-color: $gg-card-color-border;
+        }
+    }
+}
+
+.gg-card-left {
+    box-shadow: -5px 3px 3px rgba(0, 0, 0, 0.125);
+
+    .gg-card-arrow {
+        &::before {
+            border-left-color: $gg-card-color-border;
+        }
+    }
+}

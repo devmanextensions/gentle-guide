@@ -1,0 +1,96 @@
+/*!
+ *   Gentle Guide v1.0.0
+ *   Author: Dariel Vicedo <dariel@devmanextensions.com> (https://devmanextensions.com)
+ *   License: Open source - ISC <http://opensource.org/licenses/ISC>
+ */
+
+$gg-card-max-width: 300px;
+$gg-card-min-width: 200px;
+$gg-card-arrow-width: 6px;
+$gg-card-arrow-height: 6px;
+$gg-card-border-radius: 0;
+
+.gg-card {
+    position: absolute;
+    max-width: $gg-card-max-width;
+    min-width: $gg-card-min-width;
+    border-radius: $gg-card-border-radius;
+
+    .gg-card-content {
+        padding: 5px;
+    }
+
+    .gg-card-arrow {
+        position: absolute;
+        display: block;
+
+        &::before {
+            position: absolute;
+            content: '';
+            border-color: transparent;
+            border-style: solid;
+        }
+    }
+
+    .gg-card-footer {
+        a {
+            cursor: pointer;
+        }
+    }
+}
+
+.gg-card-top {
+    .gg-card-arrow {
+        width: $gg-card-arrow-width;
+        height: 0;
+        bottom: 0;
+        left: calc(50% - #{$gg-card-arrow-width});
+
+        &::before {
+            top: 0;
+            border-width: 10px 5px 0;
+        }
+    }
+}
+
+.gg-card-right {
+    .gg-card-arrow {
+        width: 0;
+        height: $gg-card-arrow-height;
+        left: 0;
+        top: calc(50% - #{$gg-card-arrow-height});
+
+        &::before {
+            right: 0;
+            border-width: 5px 10px 5px;
+        }
+    }
+}
+
+.gg-card-bottom {
+    .gg-card-arrow {
+        width: $gg-card-arrow-width;
+        height: 0;
+        top: 0;
+        left: calc(50% - #{$gg-card-arrow-width});
+
+        &::before {
+            bottom: 0;
+            border-width: 0 5px 10px;
+        }
+    }
+}
+
+.gg-card-left {
+    .gg-card-arrow {
+        width: 0;
+        height: $gg-card-arrow-height;
+        right: 0;
+        top: calc(50% - #{$gg-card-arrow-height});
+
+        &::before {
+            left: 0;
+            border-width: 5px 10px 5px;
+        }
+    }
+}
