@@ -8,6 +8,7 @@
         "sourceType": "module"
     },
     "extends": ["eslint:recommended"],
+    "parser": "@babel/eslint-parser",
     "rules": {
         "semi": "error",
         "no-multiple-empty-lines": "error",
