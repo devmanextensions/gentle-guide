@@ -15,6 +15,7 @@ $gg-card-border-radius: 0;
     max-width: $gg-card-max-width;
     min-width: $gg-card-min-width;
     border-radius: $gg-card-border-radius;
+    z-index: 99999;
 
     .gg-card-content {
         padding: 5px;
