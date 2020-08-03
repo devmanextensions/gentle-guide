@@ -36,7 +36,7 @@ export class GCard {
 
         const content = document.createElement('div');
         content.className = 'gg-card-content';
-        content.textContent = this.content;
+        content.innerHTML = this.content;
 
         const footer = document.createElement('div');
         footer.className = 'gg-card-footer';
