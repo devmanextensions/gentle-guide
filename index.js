@@ -114,6 +114,13 @@ export default class GGuide {
         this.removeStep(this.steps[this.currentStep]);
         this.currentStep = this.options.firstCard;
 
+        if (
+            typeof this.options.onFinish !== 'undefined' &&
+            typeof this.options.onFinish === 'function'
+        ) {
+            this.options.onFinish();
+        }
+
         return this;
     }
 
@@ -129,8 +136,7 @@ export default class GGuide {
 
             this.currentStep += 1;
         } else {
-            this.currentStep = this.options.firstCard;
-            this.removeStep(currentStep);
+            this.end();
         }
     }
 
