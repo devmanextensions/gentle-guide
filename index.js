@@ -16,7 +16,11 @@ export default class GGuide {
 
         this.options = Object.assign({}, defaults, options);
 
-        this.currentStep = this.options.firstCard;
+        this.currentStep =
+            typeof this.options.firstCard === 'string'
+                ? parseInt(this.options.firstCard, 10)
+                : this.options.firstCard;
+
         this.steps = this.createSteps(cards);
 
         this.onNext = this.onNext.bind(this);
@@ -131,10 +135,26 @@ export default class GGuide {
         const currentStep = this.steps[this.currentStep];
 
         if (this.steps[this.currentStep].next !== null) {
+            const nextStep = (this.currentStep += 1);
+
             this.removeStep(currentStep);
             this.drawStep(currentStep.next);
 
-            this.currentStep += 1;
+            this.currentStep = nextStep;
+
+            if (
+                typeof this.options.onNext !== 'undefined' &&
+                typeof this.options.onNext === 'function'
+            ) {
+                this.options.onNext(nextStep);
+            }
+
+            if (
+                typeof this.options.onChange !== 'undefined' &&
+                typeof this.options.onChange === 'function'
+            ) {
+                this.options.onChange(nextStep);
+            }
         } else {
             this.end();
         }
@@ -147,10 +167,26 @@ export default class GGuide {
         const currentStep = this.steps[this.currentStep];
 
         if (this.steps[this.currentStep].prev !== null) {
+            const prevStep = (this.currentStep -= 1);
+
             this.removeStep(currentStep);
             this.drawStep(currentStep.prev);
 
-            this.currentStep -= 1;
+            this.currentStep = prevStep;
+
+            if (
+                typeof this.options.onPrev !== 'undefined' &&
+                typeof this.options.onPrev === 'function'
+            ) {
+                this.options.onPrev(prevStep);
+            }
+
+            if (
+                typeof this.options.onChange !== 'undefined' &&
+                typeof this.options.onChange === 'function'
+            ) {
+                this.options.onChange(prevStep);
+            }
         }
     }
 
