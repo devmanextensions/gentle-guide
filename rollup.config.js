@@ -11,9 +11,9 @@ export default {
  * Copyright (c) ${year} ${pkg.author}
  * Licensed under ISC (https://github.com/devmanextensions/gentle-guide/blob/master/LICENSE)
  */`,
-        file: 'dist/js/gentleguide.js',
+        file: 'dist/js/gg.js',
         format: 'umd',
-        name: 'gentleguide',
+        name: 'GGuide',
     },
     plugins: [
         babel({

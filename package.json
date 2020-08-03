@@ -16,15 +16,15 @@
         "production": "npm-run-all --sequential compile",
         "compile": "npm-run-all --parallel js css",
         "css": "npm-run-all --sequential css-compile css-minify css-compile-theme css-minify-theme",
-        "css-compile": "npm run css-compile-bash -- src/scss/gentle-guide.scss dist/css/gentleguide.css",
-        "css-compile-theme": "npm run css-compile-bash -- src/scss/default-theme.scss dist/css/default-theme.css",
-        "css-minify": "npm run css-minify-bash -- dist/css/gentleguide.min.css dist/css/gentleguide.css",
-        "css-minify-theme": "npm run css-minify-bash -- dist/css/default-theme.min.css dist/css/default-theme.css",
+        "css-compile": "npm run css-compile-bash -- src/scss/gentle-guide.scss dist/css/gg.css",
+        "css-compile-theme": "npm run css-compile-bash -- src/scss/default-theme.scss dist/css/gg-default-theme.css",
+        "css-minify": "npm run css-minify-bash -- dist/css/gg.min.css dist/css/gg.css",
+        "css-minify-theme": "npm run css-minify-bash -- dist/css/gg-default-theme.min.css dist/css/gg-default-theme.css",
         "css-compile-bash": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6",
         "css-minify-bash": "cleancss --level 1 --source-map --source-map-inline-sources --output",
         "js": "npm-run-all --sequential js-compile js-minify",
         "js-compile": "rollup --config rollup.config.js --sourcemap",
-        "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/gentleguide.js.map,includeSources,url=gentleguide.min.js.map\" --output dist/js/gentleguide.min.js dist/js/gentleguide.js"
+        "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/gg.js.map,includeSources,url=gg.min.js.map\" --output dist/js/gg.min.js dist/js/gg.js"
     },
     "keywords": [
         "devman",
