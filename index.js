@@ -154,7 +154,11 @@ export default class GGuide {
      * @param {Object} step the step that owns the card to draw
      */
     drawStep(step) {
-        step.anchor.scrollIntoView(true);
+        step.anchor.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'nearest',
+        });
         document.body.append(step.card.getElement());
 
         step.card.setCardInPosition();
