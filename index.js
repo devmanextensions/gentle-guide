@@ -61,38 +61,48 @@ export default class GGuide {
         const stepList = [];
 
         for (let i = 0; i < cards.length; i++) {
-            const step = {};
+            const anchor = this.getAnchor(cards[i].selector);
 
-            step.anchor = this.getAnchor(cards[i].selector);
-            step.position = cards[i].position;
-            step.content = cards[i].content;
+            if (anchor) {
+                const step = {};
 
-            step.prev = i > 0 ? stepList[i - 1] : null;
-            step.next = null;
-            if (step.prev !== null) {
-                step.prev.next = step;
+                step.anchor = anchor;
+                step.position = cards[i].position;
+                step.content = cards[i].content;
+
+                step.prev = stepList && stepList.length ? stepList[stepList.length - 1] : null;
+                step.next = null;
+                if (step.prev !== null) {
+                    step.prev.next = step;
+                }
+
+                const cardOptions = typeof cards[i].options !== 'undefined' ? cards[i].options : {};
+
+                const canFinish =
+                    typeof cardOptions.canFinish !== 'undefined' ? cardOptions.canFinish : true;
+
+                const defaults = {
+                    showPrev: this.options.showPrev ? step.prev !== null : false,
+                    canFinish: this.options.canFinish ? canFinish : false,
+                    cardStep: i,
+                    onNext: this.onNext,
+                    onPrev: this.onPrev,
+                    onFinish: this.onFinish,
+                };
+
+                const options = Object.assign({}, defaults, cards[i].options);
+
+                const card = new GCard(step.anchor, step.position, step.content, options);
+                step.card = card;
+
+                stepList.push(step);
+            } else {
+                console.warn(
+                    "GGuide: The card with selector '" +
+                        cards[i].selector +
+                        "' was ignored since no DOM element was found."
+                );
             }
-
-            const cardOptions = typeof cards[i].options !== 'undefined' ? cards[i].options : {};
-
-            const canFinish =
-                typeof cardOptions.canFinish !== 'undefined' ? cardOptions.canFinish : true;
-
-            const defaults = {
-                showPrev: this.options.showPrev ? step.prev !== null : false,
-                canFinish: this.options.canFinish ? canFinish : false,
-                cardStep: i,
-                onNext: this.onNext,
-                onPrev: this.onPrev,
-                onFinish: this.onFinish,
-            };
-
-            const options = Object.assign({}, defaults, cards[i].options);
-
-            const card = new GCard(step.anchor, step.position, step.content, options);
-            step.card = card;
-
-            stepList.push(step);
         }
 
         return stepList;
@@ -223,6 +233,10 @@ export default class GGuide {
     getAnchor(selector) {
         const anchor = document.getElementById(selector);
 
-        return anchor;
+        if (typeof anchor != 'undefined' && anchor != null) {
+            return anchor;
+        }
+
+        return false;
     }
 }
