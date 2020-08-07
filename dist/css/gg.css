@@ -1,0 +1,82 @@
+/*!
+ *   Gentle Guide v1.0.0
+ *   Author: Dariel Vicedo <dariel@devmanextensions.com> (https://devmanextensions.com)
+ *   License: Open source - ISC <http://opensource.org/licenses/ISC>
+ */
+.gg-card {
+  position: absolute;
+  max-width: 300px;
+  min-width: 200px;
+  border-radius: 0;
+  z-index: 99999;
+}
+
+.gg-card .gg-card-content {
+  padding: 5px;
+}
+
+.gg-card .gg-card-arrow {
+  position: absolute;
+  display: block;
+}
+
+.gg-card .gg-card-arrow::before {
+  position: absolute;
+  content: '';
+  border-color: transparent;
+  border-style: solid;
+}
+
+.gg-card .gg-card-footer a {
+  cursor: pointer;
+}
+
+.gg-card-top .gg-card-arrow {
+  width: 6px;
+  height: 0;
+  bottom: 0;
+  left: calc(50% - 6px);
+}
+
+.gg-card-top .gg-card-arrow::before {
+  top: 0;
+  border-width: 10px 5px 0;
+}
+
+.gg-card-right .gg-card-arrow {
+  width: 0;
+  height: 6px;
+  left: 0;
+  top: calc(50% - 6px);
+}
+
+.gg-card-right .gg-card-arrow::before {
+  right: 0;
+  border-width: 5px 10px 5px;
+}
+
+.gg-card-bottom .gg-card-arrow {
+  width: 6px;
+  height: 0;
+  top: 0;
+  left: calc(50% - 6px);
+}
+
+.gg-card-bottom .gg-card-arrow::before {
+  bottom: 0;
+  border-width: 0 5px 10px;
+}
+
+.gg-card-left .gg-card-arrow {
+  width: 0;
+  height: 6px;
+  right: 0;
+  top: calc(50% - 6px);
+}
+
+.gg-card-left .gg-card-arrow::before {
+  left: 0;
+  border-width: 5px 10px 5px;
+}
+
+/*# sourceMappingURL=gg.css.map */
