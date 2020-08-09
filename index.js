@@ -231,7 +231,7 @@ export default class GGuide {
      * @param {String} selector
      */
     getAnchor(selector) {
-        const anchor = document.getElementById(selector);
+        const anchor = document.querySelector(selector);
 
         if (typeof anchor != 'undefined' && anchor != null) {
             return anchor;
