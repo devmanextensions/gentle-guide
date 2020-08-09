@@ -1,6 +1,6 @@
 {
     "name": "@devmanextensions/gentle-guide",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Creates interactive walkthroughs in web-apps",
     "main": "index.js",
     "repository": {

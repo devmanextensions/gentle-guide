@@ -1,5 +1,5 @@
 /*!
- * Gentle Guide v1.0.0
+ * Gentle Guide v1.0.1
  * Copyright (c) 2020 Dariel Vicedo <dariel@devmanextensions.com> (https://devmanextensions.com)
  * Licensed under ISC (https://github.com/devmanextensions/gentle-guide/blob/master/LICENSE)
  */
@@ -397,7 +397,7 @@
     }, {
       key: "getAnchor",
       value: function getAnchor(selector) {
-        var anchor = document.getElementById(selector);
+        var anchor = document.querySelector(selector);
 
         if (typeof anchor != 'undefined' && anchor != null) {
           return anchor;

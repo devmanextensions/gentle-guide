@@ -1,5 +1,5 @@
 /*!
- *   Gentle Guide Default Theme v1.0.0
+ *   Gentle Guide Default Theme v1.0.1
  *   Author: Dariel Vicedo <dariel@devmanextensions.com> (https://devmanextensions.com)
  *   License: Open source - ISC <http://opensource.org/licenses/ISC>
  */.gg-card{border:2px solid #7f54b3}.gg-card .gg-card-content{background-color:#e9e1f2;color:#000}.gg-card .gg-card-footer{font-size:small;text-align:right;padding:0;border-top:1px solid #7f54b3;background-color:#7f54b3;display:flex;justify-content:space-between}.gg-card .gg-card-footer div{padding:5px 10px}.gg-card .gg-card-footer a{color:#fff}.gg-card .gg-card-footer .gg-card-action-next{font-weight:700}.gg-card-top{box-shadow:-7px -6px 2px rgba(0,0,0,.2)}.gg-card-top .gg-card-arrow::before{border-top-color:#7f54b3}.gg-card-right{box-shadow:7px -6px 2px rgba(0,0,0,.2)}.gg-card-right .gg-card-arrow::before{border-right-color:#7f54b3}.gg-card-bottom{box-shadow:7px 6px 2px rgba(0,0,0,.2)}.gg-card-bottom .gg-card-arrow::before{border-bottom-color:#7f54b3}.gg-card-left{box-shadow:-7px 6px 2px rgba(0,0,0,.2)}.gg-card-left .gg-card-arrow::before{border-left-color:#7f54b3}
