@@ -114,6 +114,12 @@ export default class GGuide {
      * @return {GGuide}
      */
     begin() {
+        if (this.steps.length <= 0) {
+            console.info('GGuide: Nothing to show, add some cards.');
+
+            return;
+        }
+
         this.drawStep(this.steps[this.currentStep]);
 
         return this;
