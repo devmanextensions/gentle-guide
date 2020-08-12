@@ -1,7 +1,7 @@
 (function () {
     document.querySelector('#gg_start').addEventListener('click', function (e) {
         e.preventDefault();
-        e.toElement.disabled = true;
+        e.target.disabled = true;
 
         const cards = [
             {
@@ -56,7 +56,7 @@
 
         const gguide = new GGuide(cards, {
             onFinish: function () {
-                e.toElement.disabled = false;
+                e.target.disabled = false;
             },
         }).begin();
     });
