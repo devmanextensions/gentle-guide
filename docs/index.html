@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta
+            name="application-name"
+            content="Gentle Guide - A dependency-free library to create interactive walkthroughs in web-apps"
+        />
+
+        <title>
+            Gentle Guide - A dependency-free library to create interactive walkthroughs in web-apps
+        </title>
+
+        <link rel="stylesheet" href="../dist/css/gg.min.css" />
+        <link rel="stylesheet" href="../dist/css/gg-default-theme.min.css" />
+        <link rel="stylesheet" href="demo.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-4">
+                            <a
+                                id="link_github"
+                                class="navigation-link"
+                                href="https://github.com/devmanextensions/gentle-guide"
+                                target="_blank"
+                            >
+                                GitHub
+                            </a>
+                        </div>
+                        <div class="col-4 text-center">
+                            <h1 id="header_title">Gentle Guide</h1>
+                        </div>
+                        <div class="col-4 text-right">
+                            <a
+                                id="link_npm"
+                                class="navigation-link"
+                                href="https://www.npmjs.com/package/@devmanextensions/gentle-guide"
+                                target="_blank"
+                            >
+                                NPM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row no-gutters section">
+                <div class="col text-center">
+                    <h1>Gentle Guide</h1>
+                    <p class="text-muted">
+                        <em>
+                            A dependency-free library to create interactive walkthroughs in web-apps
+                        </em>
+                        <br />
+                        <small>v1.0.1</small>
+                    </p>
+                    <p>
+                        <button role="button" id="gg_start" class="btn btn-primary">
+                            Start Guide
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col">
+                    <h2>Getting Started</h2>
+                    <p>
+                        Sometimes you need to take your new users by the hand and guide them thru
+                        the main aspects of your site. This library creates an interactive guide
+                        that solves that in a very basic way: displaying cards with meaningful
+                        content and pointing it to a certain element of your site.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <h3 id="title_install_npm">Install with npm</h3>
+                    <p>
+                        Gentle Guide is available to install using npm.
+                    </p>
+                    <pre>
+                        <code>$ npm i @devmanextensions/gentle-guide</code>
+                    </pre>
+                </div>
+                <div class="col-4">
+                    <h3 id="title_install_yarn">Install with Yarn</h3>
+                    <p>
+                        Gentle Guide is available to install using Yarn.
+                    </p>
+                    <pre>
+                        <code>$ yarn add @devmanextensions/gentle-guide</code>
+                    </pre>
+                </div>
+                <div class="col-4">
+                    <h3 id="title_install_link">Link</h3>
+                    <p>
+                        Gentle Guide is available to install using html &lt;link&gt;.
+                    </p>
+                    <pre>
+                        <code>&lt;link rel="stylesheet" src="gg.min.css" /&gt;</code>
+                        <code>&lt;link rel="stylesheet" src="gg-default-theme.min.css" /&gt;</code>
+                        <code>&lt;script src="gg.min.js"&gt;&lt;/script&gt;</code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="row section">
+                <div class="col">
+                    <h3 id="title_usage_basic">Basic Usage</h3>
+                    <p>
+                        This is pretty simple: define your cards and pass it to the GGuide object.
+                    </p>
+                    <pre>
+                        <code>
+                            const cards = [
+                                {
+                                    selector: '#header_title',
+                                    position: 'bottom',
+                                    content: '&lt;strong&gt;Welcome to Gentle Guide!&lt;/strong&gt;&lt;br /&gt;A dependency-free library to create interactive walkthroughs in web-apps. &lt;em&gt;Let\'s start!&lt;/em&gt;',
+                                    options: {},
+                                },
+                                // more cards
+                            ];
+
+                            const gguide = new GGuide(cards, {
+                                onFinish: function() {
+                                    console.log("Hi, I'm finish now.");
+                                }
+                            }).begin();
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-right">
+                        Made with <span class="love">love</span> by Dariel Vicedo @
+                        <a href="https://devmanextensions.com" target="_blank"
+                            >https://devmanextensions.com</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../dist/js/gg.min.js"></script>
+        <script src="./demo.js"></script>
+    </body>
+</html>
