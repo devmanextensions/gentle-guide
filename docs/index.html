@@ -22,7 +22,7 @@
             <nav>
                 <div class="container">
                     <div class="row no-gutters">
-                        <div class="col-4">
+                        <div class="col col-md-4">
                             <a
                                 id="link_github"
                                 class="navigation-link"
@@ -32,10 +32,10 @@
                                 GitHub
                             </a>
                         </div>
-                        <div class="col-4 text-center">
+                        <div class="col col-md-4 text-center">
                             <h1 id="header_title">Gentle Guide</h1>
                         </div>
-                        <div class="col-4 text-right">
+                        <div class="col col-md-4 text-right">
                             <a
                                 id="link_npm"
                                 class="navigation-link"
@@ -82,7 +82,7 @@
             </div>
 
             <div class="row">
-                <div class="col-4">
+                <div class="col col-md-4">
                     <h3 id="title_install_npm">Install with npm</h3>
                     <p>
                         Gentle Guide is available to install using npm.
@@ -91,7 +91,7 @@
                         <code>$ npm i @devmanextensions/gentle-guide</code>
                     </pre>
                 </div>
-                <div class="col-4">
+                <div class="col col-md-4">
                     <h3 id="title_install_yarn">Install with Yarn</h3>
                     <p>
                         Gentle Guide is available to install using Yarn.
@@ -100,7 +100,7 @@
                         <code>$ yarn add @devmanextensions/gentle-guide</code>
                     </pre>
                 </div>
-                <div class="col-4">
+                <div class="col col-md-4">
                     <h3 id="title_install_link">Link</h3>
                     <p>
                         Gentle Guide is available to install using html &lt;link&gt;.
@@ -121,21 +121,21 @@
                     </p>
                     <pre>
                         <code>
-                            const cards = [
-                                {
-                                    selector: '#header_title',
-                                    position: 'bottom',
-                                    content: '&lt;strong&gt;Welcome to Gentle Guide!&lt;/strong&gt;&lt;br /&gt;A dependency-free library to create interactive walkthroughs in web-apps. &lt;em&gt;Let\'s start!&lt;/em&gt;',
-                                    options: {},
-                                },
-                                // more cards
-                            ];
+const cards = [
+    {
+        selector: '#header_title',
+        position: 'bottom',
+        content: '&lt;strong&gt;Welcome to Gentle Guide!&lt;/strong&gt;&lt;br /&gt;A dependency-free library to create interactive walkthroughs in web-apps. &lt;em&gt;Let\'s start!&lt;/em&gt;',
+        options: {},
+    },
+    // more cards
+];
 
-                            const gguide = new GGuide(cards, {
-                                onFinish: function() {
-                                    console.log("Hi, I'm finish now.");
-                                }
-                            }).begin();
+const gguide = new GGuide(cards, {
+    onFinish: function() {
+        console.log("Hi, I'm finish now.");
+    }
+}).begin();
                         </code>
                     </pre>
                 </div>

@@ -99,20 +99,22 @@ samp {
 }
 
 pre {
-    display: block;
-    font-size: 87.5%;
-    color: #212529;
-    margin-top: 0;
+    margin: 0;
     overflow: auto;
     -ms-overflow-style: scrollbar;
+    display: block;
+    font-size: 87.5%;
     border-left: 2px solid #adb5bd;
-    padding-left: 15px;
 }
 
 pre code {
     white-space: pre;
-    margin-bottom: -1em;
+    margin: 0;
     display: block;
+    font-size: inherit;
+    color: inherit;
+    word-break: normal;
+    margin-left: 15px;
 }
 
 .container {
@@ -122,6 +124,30 @@ pre code {
     margin-right: auto;
     margin-left: auto;
     max-width: 1140px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
 
 .row {
@@ -144,18 +170,19 @@ pre code {
     padding-left: 0;
 }
 
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
+.col,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -167,14 +194,16 @@ pre code {
     flex-basis: 0;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    min-width: 0;
+    /* min-width: 0; */
     max-width: 100%;
 }
 
-.col-4 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+@media (min-width: 768px) {
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }
 
 .p-1 {
