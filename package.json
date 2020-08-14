@@ -1,6 +1,6 @@
 {
     "name": "@devmanextensions/gentle-guide",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Creates interactive walkthroughs in web-apps",
     "main": "index.js",
     "repository": {
@@ -33,6 +33,7 @@
         "web",
         "help"
     ],
+    "homepage": "https://devmanextensions.github.io/gentle-guide/",
     "author": "Dariel Vicedo <dariel@devmanextensions.com> (https://devmanextensions.com)",
     "license": "ISC",
     "devDependencies": {

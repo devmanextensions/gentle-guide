@@ -1,5 +1,5 @@
 /*!
- * Gentle Guide v1.0.1
+ * Gentle Guide v1.0.2
  * Copyright (c) 2020 Dariel Vicedo <dariel@devmanextensions.com> (https://devmanextensions.com)
  * Licensed under ISC (https://github.com/devmanextensions/gentle-guide/blob/master/LICENSE)
  */
