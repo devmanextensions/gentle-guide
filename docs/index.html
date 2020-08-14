@@ -13,6 +13,13 @@
             Gentle Guide - A dependency-free library to create interactive walkthroughs in web-apps
         </title>
 
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css"
+            integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+            crossorigin="anonymous"
+        />
+
         <link rel="stylesheet" href="gg.min.css" />
         <link rel="stylesheet" href="gg-default-theme.min.css" />
         <link rel="stylesheet" href="demo.css" />
@@ -88,7 +95,7 @@
                         Gentle Guide is available to install using npm.
                     </p>
                     <pre>
-                        <code>$ npm i @devmanextensions/gentle-guide</code>
+                        <code class="language-bash">$ npm i @devmanextensions/gentle-guide</code>
                     </pre>
                 </div>
                 <div class="col col-md-4">
@@ -97,7 +104,7 @@
                         Gentle Guide is available to install using Yarn.
                     </p>
                     <pre>
-                        <code>$ yarn add @devmanextensions/gentle-guide</code>
+                        <code class="language-bash">$ yarn add @devmanextensions/gentle-guide</code>
                     </pre>
                 </div>
                 <div class="col col-md-4">
@@ -106,9 +113,20 @@
                         Gentle Guide is available to install using html &lt;link&gt;.
                     </p>
                     <pre>
-                        <code>&lt;link rel="stylesheet" src="gg.min.css" /&gt;</code>
-                        <code>&lt;link rel="stylesheet" src="gg-default-theme.min.css" /&gt;</code>
-                        <code>&lt;script src="gg.min.js"&gt;&lt;/script&gt;</code>
+                        <code class="language-html">
+&lt;!DOCTYPE html&gt
+
+&lt;head&gt;
+    &lt;link rel="stylesheet" src="gg.min.css" /&gt;
+    &lt;link rel="stylesheet" src="gg-default-theme.min.css" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;!-- body --&gt;
+    
+    &lt;script src="gg.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+                        </code>
                     </pre>
                 </div>
             </div>
@@ -120,7 +138,7 @@
                         This is pretty simple: define your cards and pass it to the GGuide object.
                     </p>
                     <pre>
-                        <code>
+                        <code class="language-javascript">
 const cards = [
     {
         selector: '#header_title',
@@ -154,6 +172,12 @@ const gguide = new GGuide(cards, {
                 </div>
             </div>
         </footer>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js"
+            integrity="sha512-WkVkkoB31AoI9DAk6SEEEyacH9etQXKUov4JRRuM1Y681VsTq7jYgrRw06cbP6Io7kPsKx+tLFpH/HXZSZ2YEQ=="
+            crossorigin="anonymous"
+        ></script>
 
         <script src="gg.min.js"></script>
         <script src="./demo.js"></script>
